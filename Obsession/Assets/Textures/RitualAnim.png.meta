@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 2a0a27e9a96de2e4092336bac8808425
+timeCreated: 1454248257
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RitualAnim_0
+    21300002: RitualAnim_1
+    21300004: RitualAnim_2
+    21300006: RitualAnim_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: RitualAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 250}
+        - {x: -81, y: 126}
+        - {x: -70, y: 80}
+        - {x: -63, y: 74}
+        - {x: -60, y: 76}
+        - {x: -52, y: 86}
+        - {x: -52, y: 95}
+        - {x: -51, y: 100}
+        - {x: -51, y: 106}
+        - {x: -51, y: 81}
+        - {x: -73, y: 63}
+        - {x: -65, y: -39}
+        - {x: -89, y: -88}
+        - {x: -89, y: -170}
+        - {x: -88, y: -180}
+        - {x: -82, y: -183}
+        - {x: -79, y: -182}
+        - {x: -63, y: -261}
+        - {x: 54, y: -261}
+        - {x: 57, y: -257}
+        - {x: 57, y: 250}
+      - - {x: -78, y: -26}
+        - {x: -86, y: -34}
+        - {x: -85, y: -37}
+        - {x: -81, y: -37}
+        - {x: -74, y: -31}
+        - {x: -74, y: -27}
+        - {x: -75, y: -26}
+      - - {x: 87, y: 19}
+        - {x: 90, y: 20}
+        - {x: 90, y: 23}
+        - {x: 87, y: 24}
+        - {x: 85, y: 22}
+      - - {x: -84, y: 36}
+        - {x: -86, y: 35}
+        - {x: -88, y: 30}
+        - {x: -86, y: 28}
+        - {x: -82, y: 28}
+        - {x: -80, y: 30}
+        - {x: -80, y: 34}
+        - {x: -82, y: 36}
+      - - {x: -69, y: 63}
+        - {x: -66, y: 64}
+        - {x: -66, y: 67}
+        - {x: -69, y: 68}
+        - {x: -71, y: 66}
+      - - {x: 74, y: 104}
+        - {x: 72, y: 101}
+        - {x: 72, y: 99}
+        - {x: 74, y: 97}
+        - {x: 78, y: 98}
+        - {x: 82, y: 102}
+        - {x: 82, y: 104}
+        - {x: 80, y: 106}
+    - name: RitualAnim_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 250}
+        - {x: -81, y: 126}
+        - {x: -70, y: 80}
+        - {x: -63, y: 74}
+        - {x: -60, y: 76}
+        - {x: -52, y: 86}
+        - {x: -52, y: 95}
+        - {x: -51, y: 100}
+        - {x: -51, y: 106}
+        - {x: -51, y: 98}
+        - {x: -50, y: 83}
+        - {x: -76, y: 64}
+        - {x: -89, y: -38}
+        - {x: -89, y: -226}
+        - {x: -63, y: -261}
+        - {x: 54, y: -261}
+        - {x: 65, y: -246}
+        - {x: 65, y: 250}
+      - - {x: -78, y: -26}
+        - {x: -86, y: -34}
+        - {x: -85, y: -37}
+        - {x: -81, y: -37}
+        - {x: -74, y: -31}
+        - {x: -74, y: -27}
+        - {x: -75, y: -26}
+      - - {x: 87, y: 19}
+        - {x: 90, y: 20}
+        - {x: 90, y: 23}
+        - {x: 87, y: 24}
+        - {x: 85, y: 22}
+      - - {x: -84, y: 36}
+        - {x: -86, y: 35}
+        - {x: -88, y: 30}
+        - {x: -86, y: 28}
+        - {x: -82, y: 28}
+        - {x: -80, y: 30}
+        - {x: -80, y: 34}
+        - {x: -82, y: 36}
+      - - {x: -69, y: 63}
+        - {x: -66, y: 64}
+        - {x: -66, y: 67}
+        - {x: -69, y: 68}
+        - {x: -71, y: 66}
+      - - {x: 74, y: 104}
+        - {x: 72, y: 101}
+        - {x: 72, y: 99}
+        - {x: 74, y: 97}
+        - {x: 78, y: 98}
+        - {x: 82, y: 102}
+        - {x: 82, y: 104}
+        - {x: 80, y: 106}
+    - name: RitualAnim_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 136, y: 144}
+        - {x: 122, y: 137}
+        - {x: 64, y: 234}
+        - {x: 36, y: 248}
+        - {x: -4, y: 248}
+        - {x: -57, y: 154}
+        - {x: -70, y: 80}
+        - {x: -63, y: 74}
+        - {x: -60, y: 76}
+        - {x: -52, y: 86}
+        - {x: -52, y: 95}
+        - {x: -51, y: 100}
+        - {x: -51, y: 106}
+        - {x: -51, y: 81}
+        - {x: -73, y: 63}
+        - {x: -65, y: -39}
+        - {x: -89, y: -88}
+        - {x: -89, y: -170}
+        - {x: -88, y: -180}
+        - {x: -82, y: -183}
+        - {x: -79, y: -182}
+        - {x: -63, y: -261}
+        - {x: 56, y: -261}
+        - {x: 65, y: -238}
+        - {x: 149, y: 95}
+        - {x: 149, y: 138}
+      - - {x: -78, y: -26}
+        - {x: -86, y: -34}
+        - {x: -85, y: -37}
+        - {x: -81, y: -37}
+        - {x: -74, y: -31}
+        - {x: -74, y: -27}
+        - {x: -75, y: -26}
+      - - {x: 87, y: 19}
+        - {x: 90, y: 20}
+        - {x: 90, y: 23}
+        - {x: 87, y: 24}
+        - {x: 85, y: 22}
+      - - {x: -84, y: 36}
+        - {x: -86, y: 35}
+        - {x: -88, y: 30}
+        - {x: -86, y: 28}
+        - {x: -82, y: 28}
+        - {x: -80, y: 30}
+        - {x: -80, y: 34}
+        - {x: -82, y: 36}
+      - - {x: 97, y: 57}
+        - {x: 92, y: 57}
+        - {x: 91, y: 55}
+        - {x: 91, y: 49}
+        - {x: 107, y: 49}
+        - {x: 107, y: 56}
+        - {x: 105, y: 56}
+      - - {x: 63, y: 64}
+        - {x: 44, y: 64}
+        - {x: 44, y: 60}
+        - {x: 53, y: 54}
+        - {x: 74, y: 54}
+        - {x: 75, y: 55}
+        - {x: 75, y: 59}
+        - {x: 73, y: 62}
+      - - {x: 40, y: 59}
+        - {x: 43, y: 60}
+        - {x: 43, y: 63}
+        - {x: 40, y: 64}
+        - {x: 38, y: 62}
+      - - {x: 35, y: 60}
+        - {x: 38, y: 61}
+        - {x: 38, y: 64}
+        - {x: 35, y: 65}
+        - {x: 33, y: 63}
+      - - {x: -69, y: 63}
+        - {x: -66, y: 64}
+        - {x: -66, y: 67}
+        - {x: -69, y: 68}
+        - {x: -71, y: 66}
+    - name: RitualAnim_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 248}
+        - {x: -15, y: 243}
+        - {x: -74, y: 79}
+        - {x: -63, y: 74}
+        - {x: -60, y: 76}
+        - {x: -52, y: 86}
+        - {x: -52, y: 95}
+        - {x: -51, y: 100}
+        - {x: -51, y: 106}
+        - {x: -51, y: 81}
+        - {x: -73, y: 63}
+        - {x: -65, y: -39}
+        - {x: -89, y: -88}
+        - {x: -89, y: -170}
+        - {x: -88, y: -180}
+        - {x: -82, y: -183}
+        - {x: -79, y: -182}
+        - {x: -63, y: -261}
+        - {x: 54, y: -261}
+        - {x: 59, y: -255}
+        - {x: 74, y: -126}
+        - {x: 74, y: 248}
+      - - {x: -78, y: -26}
+        - {x: -86, y: -34}
+        - {x: -85, y: -37}
+        - {x: -81, y: -37}
+        - {x: -74, y: -31}
+        - {x: -74, y: -27}
+        - {x: -75, y: -26}
+      - - {x: 87, y: 19}
+        - {x: 90, y: 20}
+        - {x: 90, y: 23}
+        - {x: 87, y: 24}
+        - {x: 85, y: 22}
+      - - {x: -84, y: 36}
+        - {x: -86, y: 35}
+        - {x: -88, y: 30}
+        - {x: -86, y: 28}
+        - {x: -82, y: 28}
+        - {x: -80, y: 30}
+        - {x: -80, y: 34}
+        - {x: -82, y: 36}
+      - - {x: -69, y: 63}
+        - {x: -66, y: 64}
+        - {x: -66, y: 67}
+        - {x: -69, y: 68}
+        - {x: -71, y: 66}
+      - - {x: 120, y: 89}
+        - {x: 116, y: 88}
+        - {x: 115, y: 86}
+        - {x: 115, y: 82}
+        - {x: 119, y: 80}
+        - {x: 127, y: 82}
+        - {x: 130, y: 84}
+        - {x: 130, y: 86}
+        - {x: 129, y: 89}
+      - - {x: 81, y: 125}
+        - {x: 66, y: 104}
+        - {x: 66, y: 99}
+        - {x: 68, y: 96}
+        - {x: 72, y: 96}
+        - {x: 79, y: 97}
+        - {x: 84, y: 102}
+        - {x: 88, y: 115}
+        - {x: 88, y: 125}
+      - - {x: 92, y: 152}
+        - {x: 92, y: 141}
+        - {x: 94, y: 138}
+        - {x: 101, y: 138}
+        - {x: 104, y: 142}
+        - {x: 104, y: 149}
+        - {x: 102, y: 152}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
