@@ -1,0 +1,38 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class LifeBar : MonoBehaviour {
+
+
+    private const float SPEED = 1.0f;
+
+    public GameObject fill;
+
+    public int value;
+    public int maxValue;
+    public int minValue;
+    public CharacterScript character;
+
+    private float targetScale;
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        this.value = character.score;
+        float xScale = Mathf.Clamp(((this.maxValue - this.value) / (float)(this.maxValue - this.minValue)), 0, 1);
+        this.fill.transform.localScale = new Vector2(xScale, xScale);
+
+        //if (xScale >= 0.3f)
+        //    this.fill.GetComponent<SpriteRenderer>().color = Color.green;
+        //else
+        //    this.fill.GetComponent<SpriteRenderer>().color = Color.red;
+
+
+	
+	}
+}

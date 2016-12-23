@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class gameOverController : MonoBehaviour {
+
+    public GUIText text;
+
+    void Start()
+    {
+        int score = GameObject.Find("FinalScore").GetComponent<ScoreContainer>().score;
+        text.text = "Your Score: " + score;
+    }
+
+
+	void Update() {
+	if (Input.anyKey)
+			Application.LoadLevel ("Main");
+	}
+}

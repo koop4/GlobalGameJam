@@ -1,0 +1,47 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class TextureLoop : MonoBehaviour {
+
+    public enum BackgroundMode { Day, Night };
+    public BackgroundMode currentMode;
+
+    private float speed = 0.30f;
+    private BackgroundMode lastMode;
+
+    private float targetOffset;
+
+	// Use this for initialization
+	void Start ()
+    {
+        this.targetOffset = 0.25f;
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        //this.renderer.material.mainTextureOffset= new Vector2(this.renderer.material.mainTextureOffset.x+ this.speed * Time.deltaTime,0);
+        if (this.currentMode != lastMode)
+        {
+            if (this.currentMode == BackgroundMode.Day)
+                this.targetOffset = 0.25f;
+            else
+                this.targetOffset = -0.25f;
+        }
+
+            if(this.renderer.material.mainTextureOffset.x< this.targetOffset)
+            {
+                this.renderer.material.mainTextureOffset= new Vector2(this.renderer.material.mainTextureOffset.x+ this.speed * Time.deltaTime,0);
+                if(this.renderer.material.mainTextureOffset.x >= this.targetOffset)
+                    this.renderer.material.mainTextureOffset= new Vector2(this.targetOffset,0);
+            }
+            else if(this.renderer.material.mainTextureOffset.x> this.targetOffset)
+            {
+                this.renderer.material.mainTextureOffset= new Vector2(this.renderer.material.mainTextureOffset.x- this.speed * Time.deltaTime,0);
+                if(this.renderer.material.mainTextureOffset.x <= this.targetOffset)
+                    this.renderer.material.mainTextureOffset= new Vector2(this.targetOffset,0);
+            }
+
+        this.lastMode = this.currentMode;
+	}
+}

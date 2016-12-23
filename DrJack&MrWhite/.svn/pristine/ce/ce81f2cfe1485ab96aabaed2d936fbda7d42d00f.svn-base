@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class TextureLoop : MonoBehaviour {
+
+    public float speed = 0.1f;
+
+	// Use this for initialization
+	void Start ()
+    {
+	
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        this.renderer.material.mainTextureOffset= new Vector2(this.renderer.material.mainTextureOffset.x+ this.speed * Time.deltaTime,0);
+	}
+}

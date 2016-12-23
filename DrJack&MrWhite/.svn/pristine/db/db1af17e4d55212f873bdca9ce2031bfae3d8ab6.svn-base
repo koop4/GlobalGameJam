@@ -1,0 +1,92 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class CharacterScript : MonoBehaviour
+{
+
+    private const float DEFAULT_SPEED = 2.0f;
+    private const float GRAVITY_STRENGTH = 1.0f;
+    private const float JUMP_STRENGTH = 0.2f;
+
+    public enum CharacterType { Chemister, Drunk };
+    public CharacterType currentType;
+
+    public float azz;
+
+    public float Speed {get;set;}
+    public float earthRadius = 4.6f;
+
+    private float _offset = 0;
+    private float vSpeed = 0;
+
+    private float timeCounter;
+
+    //sprites
+    public Sprite sprite_chemister, sprite_drunk;
+
+    //flags
+    private bool canJump = true;
+
+
+	// Use this for initialization
+	void Start ()
+    {
+	    this.Speed = DEFAULT_SPEED;
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {        
+        this.transform.position = new Vector3(-Mathf.Cos(this.timeCounter * this.Speed) * (this.earthRadius + this._offset), Mathf.Sin(this.timeCounter * this.Speed) * (this.earthRadius + this._offset), this.transform.position.z);
+        this.timeCounter += Time.deltaTime;
+        this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(this.transform.position.y, this.transform.position.x) * Mathf.Rad2Deg - 90, Vector3.forward);
+            
+
+        this._offset += vSpeed;
+
+        //se sono a contatto con il terreno
+        if (this._offset == 0)
+        {
+            //quando tocco terra resetto il flag canJump
+            this.canJump = true;
+           
+        }
+        else if (this._offset < 0)
+        {
+            //sono entrato nel terreno
+            this.vSpeed = 0;
+            this._offset = 0;
+        }
+        else //sono in aria
+        {
+            //aggiorno la gravità
+            this.vSpeed -= GRAVITY_STRENGTH * Time.deltaTime;
+
+        }
+
+        if (this.canJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (this._offset == 0)
+                this.Jump(1);
+            else
+                this.Jump(1f);
+        }
+
+        //aggiorno lo sprite in base al tipo corrente
+        if (this.currentType == CharacterType.Chemister)
+            this.GetComponent<SpriteRenderer>().sprite = this.sprite_chemister;
+        else
+            this.GetComponent<SpriteRenderer>().sprite = this.sprite_drunk;
+	}
+
+
+
+    private void Jump(float multiplier)
+    {
+        this.vSpeed = 0;
+        this.vSpeed += JUMP_STRENGTH * multiplier;
+        //se sono già in aria e salto ancora, disabilito il salto
+        if (this._offset > 0)
+            this.canJump = false;
+    }
+}

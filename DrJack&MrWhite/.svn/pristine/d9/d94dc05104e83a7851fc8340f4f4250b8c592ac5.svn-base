@@ -1,0 +1,32 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class PickUpController : MonoBehaviour {
+	private float timer;
+	public GameObject drink;
+	public GameObject potion;
+	public GameObject giocatore;
+
+	private bool gravityActive = false;
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate () {
+		timer += Time.deltaTime;
+		if(timer>3 && !potion.activeSelf){
+			timer=0.0f;
+			potion.SetActive(true);
+
+			Vector3 target = giocatore.transform.position;
+			Quaternion rotation = Quaternion.Euler(0,0,-45);
+			target = rotation*target;
+			potion.rigidbody2D.AddForce((target-this.transform.position).normalized*350.0f);
+		}
+
+
+	}
+}

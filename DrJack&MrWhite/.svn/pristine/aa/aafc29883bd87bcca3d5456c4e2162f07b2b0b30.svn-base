@@ -1,0 +1,99 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class CharacterScript : MonoBehaviour
+{
+
+    private const float DEFAULT_SPEED = 2.0f;
+    private const float GRAVITY_STRENGTH = 1.0f;
+    private const float JUMP_STRENGTH = 0.2f;
+    private const float JUMP_STRENGTH_HORIZONTAL = 0.02f;
+
+
+    public enum CharacterType { Chemister, Drunk };
+    public CharacterType currentType;
+
+    public float Speed = DEFAULT_SPEED;
+    private float earthRadius = 4.6f;
+
+    private float _offset = 0;
+    private float vSpeed = 0;
+
+    private float timeCounter;
+
+    //riferimenti agli altri oggetti
+    public WorldScript world;
+
+    //sprites
+    public Sprite sprite_chemister, sprite_drunk;
+
+    //flags
+    private bool canJump = true;
+
+
+	// Use this for initialization
+	void Start ()
+    {
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {        
+        this.transform.position = new Vector3(-Mathf.Cos(this.timeCounter * this.Speed) * (this.earthRadius + this._offset), Mathf.Sin(this.timeCounter * this.Speed) * (this.earthRadius + this._offset), this.transform.position.z);
+        this.timeCounter += Time.deltaTime;
+        this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(this.transform.position.y, this.transform.position.x) * Mathf.Rad2Deg - 90, Vector3.forward);
+
+        //ottengo il radius del mondo a seconda della sua dimensione
+        this.earthRadius = this.world.GetGameRadius();
+        this._offset += vSpeed;
+
+        //se sono a contatto con il terreno
+        if (this._offset == 0)
+        {
+            //quando tocco terra resetto il flag canJump
+            this.canJump = true;
+           
+        }
+        else if (this._offset < 0)
+        {
+            //sono entrato nel terreno
+            this.vSpeed = 0;
+            this._offset = 0;
+        }
+        else //sono in aria
+        {
+            //aggiorno la gravità
+            this.vSpeed -= GRAVITY_STRENGTH * Time.deltaTime;
+
+        }
+
+        if (this.canJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (this._offset == 0)
+                this.Jump(1);
+            else
+                this.Jump(1f);
+        }
+
+        //aggiorno lo sprite in base al tipo corrente
+        if (this.currentType == CharacterType.Chemister)
+            this.GetComponent<SpriteRenderer>().sprite = this.sprite_chemister;
+        else
+            this.GetComponent<SpriteRenderer>().sprite = this.sprite_drunk;
+
+        //agiorno posizione camera
+        Camera.main.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, Camera.main.transform.position.z);
+	}
+
+
+
+    private void Jump(float multiplier)
+    {
+        this.vSpeed = 0;
+        this.vSpeed += JUMP_STRENGTH * multiplier;
+        this.timeCounter += JUMP_STRENGTH_HORIZONTAL;
+        //se sono già in aria e salto ancora, disabilito il salto
+        if (this._offset > 0)
+            this.canJump = false;
+    }
+}

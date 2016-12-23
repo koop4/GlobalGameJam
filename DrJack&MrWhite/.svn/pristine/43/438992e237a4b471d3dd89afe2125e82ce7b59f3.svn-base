@@ -1,0 +1,62 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class WorldScript : MonoBehaviour
+{
+
+    private const float SIZE_SMALL = 0.3f;
+    private const float SIZE_MEDIUM = 0.6f;
+    private const float SIZE_BIG = 1.0f;
+	public Sprite day;
+	public Sprite night;
+	public CharacterScript giocatore;
+
+    
+    public enum WorldSize { Small, Medium, Big };
+    public WorldSize currentSize = WorldSize.Big;
+
+	// Use this for initialization
+	void Start () {
+
+	}
+	
+	// Update is called once per frame
+	void Update ()
+    {
+		if (giocatore.currentType == CharacterScript.CharacterType.Chemister)
+						this.GetComponent<SpriteRenderer> ().sprite = day;
+		else
+						this.GetComponent<SpriteRenderer> ().sprite = night;
+    /*    switch (this.currentSize)
+        { 
+            case WorldSize.Small:
+                this.transform.localScale = SIZE_SMALL * Vector2.one;
+                break;
+            case WorldSize.Medium:
+                this.transform.localScale = SIZE_MEDIUM * Vector2.one;
+                break;
+            case WorldSize.Big:
+                this.transform.localScale = SIZE_BIG * Vector2.one;
+                break;
+        }*/
+	}
+
+
+    public float GetGameRadius()
+    {
+        switch (this.currentSize)
+        {
+            case WorldSize.Small:
+                return 0.3f;
+            case WorldSize.Medium:
+                return 0.65f;
+            case WorldSize.Big:
+                return 1.4f;
+            default:
+                return 0;
+        }
+    }
+
+
+    
+}

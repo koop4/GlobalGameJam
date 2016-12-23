@@ -1,0 +1,44 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class PickupObjectScript : MonoBehaviour {
+
+	private const float GRAVITY_STRENGHT =300.0f;
+	private bool gravityActive = false;
+	public WorldScript world;
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate ()
+	{
+	this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(this.transform.position.y, this.transform.position.x) * Mathf.Rad2Deg - 90, Vector3.forward);
+
+	if ((this.transform.position - Vector3.zero).magnitude > world.GetGameRadius ()) {
+			this.GetComponent<SpriteRenderer> ().enabled = true;
+			this.collider2D.enabled= true;
+	}
+
+	if ((this.transform.position - Vector3.zero).magnitude <= world.GetGameRadius () && this.collider2D.enabled) {
+		this.GetComponent<SpriteRenderer> ().enabled = false;
+		this.collider2D.enabled= false;
+		this.transform.position = Vector3.zero;
+		this.gameObject.SetActive(false);
+		this.rigidbody2D.velocity = Vector3.zero;
+			this.gravityActive = false;
+	}
+
+	if ((this.transform.position - Vector3.zero).magnitude > world.GetGameRadius ()/2)
+						this.gravityActive = true;
+
+
+		if (gravityActive)
+		{
+			this.rigidbody2D.AddForce((Vector3.zero - this.transform.position).normalized * GRAVITY_STRENGHT * Time.deltaTime);
+				}
+
+	}
+}
