@@ -2,7 +2,7 @@
 
 Projects developed @Global Game Jams
 
-All Jams have been attended @Milan
+Jams have attended @Milan
 
 - 2014 Dr Jack & Mr White:
 
@@ -22,6 +22,8 @@ All Jams have been attended @Milan
 
 	Trailer:  https://www.youtube.com/watch?v=x10dBwZFi2Q
 	
+Jams have attended @Chicago
+
 - 2017 Mind Game
 
 	Jam Link: http://globalgamejam.org/2016/games/obsession-0
