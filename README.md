@@ -21,3 +21,10 @@ All Jams have been attended @Milan
 	Jam Link: http://globalgamejam.org/2016/games/obsession-0
 
 	Trailer:  https://www.youtube.com/watch?v=x10dBwZFi2Q
+	
+- 2017 Mind Game
+
+	Jam Link: http://globalgamejam.org/2016/games/obsession-0
+
+	Trailer:  http://globalgamejam.org/2017/games/mind-game
+
